@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "releases": [
+    {
+      "id": "SampleRelease00001",
+      "artistUri": "spotify:artist:REPLACE_WITH_REAL_22_CHAR_ID",
+      "artistName": "Your Artist",
+      "title": "Sample Preview Album",
+      "type": "album",
+      "releaseDate": "2026-12-01",
+      "label": "Your Label",
+      "color": "#7a3b9e",
+      "tracks": [
+        { "title": "Opening Track", "lengthMs": 185000 },
+        { "title": "Second Track", "lengthMs": 212000 }
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "artistUri": "spotify:artist:REPLACE_WITH_REAL_22_CHAR_ID",
+      "biography": "Preview bio text shown on the artist page."
+    }
+  ]
+}

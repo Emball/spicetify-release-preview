@@ -1,0 +1,14 @@
+{
+  "name": "spicetify-release-preview",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Spicetify extension that overlays local test releases and artist overrides onto the Spotify client UI",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --format=iife --target=chrome110 --outfile=dist/release-preview.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0"
+  }
+}
