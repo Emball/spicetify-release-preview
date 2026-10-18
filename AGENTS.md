@@ -4,7 +4,7 @@ Spicetify extension for Windows Spotify desktop. Overlays locally defined test r
 
 ## Architecture
 
-- `src/index.ts`: entry; waits for Spicetify APIs, installs the hooks, registers the menu item.
+- `src/index.ts`: entry; installs the fetch hook immediately, registers the menu item once `Menu` and `PopupModal` exist, then installs the GraphQL and playback hooks as their APIs appear. Shows a toast on load, or naming the missing API after a 30s timeout.
 - `src/overlay/hook.ts`: wraps `window.fetch` (pathfinder requests) and `Spicetify.GraphQL.Request`; dispatches by operation name to adapters; logs each newly seen operation once.
 - `src/adapters/`: all knowledge of Spotify response shapes. `artist` (overrides, discography injection), `album` (synthesizes the page for local album URIs), `search` (album results), `shapes` (builders). Client updates are fixed here only.
 - `src/playback.ts`: wraps `Platform.PlayerAPI.play`; a local album context plays the first track via `Player.playUri` and queues the rest.
